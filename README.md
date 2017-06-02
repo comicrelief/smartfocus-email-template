@@ -13,8 +13,10 @@ Preview: https://smartfocus-email-template.netlify.com/
 ### Copying the markup:
 
 The email template consists of rows that can be used in our emails. 
- - Each row is surrounded by comments in capitals denoting the start and the end of the row. (e.g. `<!-- LOGO ROW --> `)
- - Within each row there are extra comments with instructions where to change colour, fonts etc. (e.g. `<!-- row's background colour 2x -->`)
+ - Each row is surrounded by comments in capitals denoting the start and the end of the row. 
+ (e.g. `<!-- LOGO ROW --> `)
+ - Within each row there are extra comments with instructions where to change colour, fonts etc. 
+ (e.g. `<!-- row's background colour 2x -->`)
 
 There are parts to an email that should always be copied in: 
 - Everything above the comment  ROWS START HERE.
