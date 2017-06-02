@@ -1,6 +1,7 @@
 # SmartFocus email template
 
 This is the main email template for our campaign and 365 emails that are sent out via SmartFocus.
+Preview: https://smartfocus-email-template.netlify.com/
 
 ## How to use the template:
 
