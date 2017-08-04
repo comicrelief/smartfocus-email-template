@@ -37,5 +37,5 @@ However, you'd always have the FOOTER row as last row and you'd normally begin w
 
 Note that SmartFocus' placeholders for Links ([EMV LINK]13[/ EMV LINK]) won't work when previewing in the browser, but they can be tested by sending yourself a test email through SmartFocus.
 
-Images should be uploaded to the `email-assets.comicrelief.com` S3 bucket from which the source link for the image can be retrieved.
+Images should be uploaded to the `email-assets.comicrelief.com` S3 bucket inside the `2017` folder (towards the end of 2018 the email assets outside the 2017 folder will be deleted in order to clean up the bucket). Inside the 2017 folder the images can be placed inside any of the folders the image belongs to. By right clicking on the image file the source link for the image can be retrieved.
 
