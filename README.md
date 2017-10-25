@@ -2,11 +2,13 @@
 
 This is the main email template for our campaign and 365 emails that are sent out via SmartFocus.
 Preview: https://smartfocus-email-template.netlify.com/
+Sport Relief template:
+https://smartfocus-email-template.netlify.com/sr18
 
 
 ## How to use the template:
 
-- Go to: https://smartfocus-email-template.netlify.com/
+- Go to: https://smartfocus-email-template.netlify.com/sr18
 - Right-click with your mouse and select something along the lines of "view page source"
 - A new tab / window /pop-up will be opened with the template's markup.
 
@@ -26,7 +28,7 @@ There are parts to an email that should always be copied in:
 - The FOOTER row and everything below.
 
 Between the ROWS START HERE comment and the ROWS END HERE comment rows can be added in different order.
-However, you'd always have the FOOTER row as last row and you'd normally begin with the PRE-HEADER, LOGO and NAVIGATION rows.
+However, you'd always have the FOOTER row as last row and you'd normally begin with the PRE-HEADER and LOGO rows.
 
 #### Where to copy and previewing:
 - open up your favourite text editor (just open up notepad if you're on a Windows machine)
