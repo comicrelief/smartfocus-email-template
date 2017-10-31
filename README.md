@@ -1,14 +1,19 @@
 # SmartFocus email template
 
 This is the main email template for our campaign and 365 emails that are sent out via SmartFocus.
+
 Preview: https://smartfocus-email-template.netlify.com/
+
 Sport Relief template:
-https://smartfocus-email-template.netlify.com/sr18
+https://smartfocus-email-template.netlify.com/sr18.html
+
+Sport Relief template with frequently used rows already there:
+https://smartfocus-email-template.netlify.com/sr18-start.html
 
 
 ## How to use the template:
 
-- Go to: https://smartfocus-email-template.netlify.com/sr18
+- Go to: https://smartfocus-email-template.netlify.com/sr18.html
 - Right-click with your mouse and select something along the lines of "view page source"
 - A new tab / window /pop-up will be opened with the template's markup.
 
