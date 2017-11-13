@@ -45,6 +45,19 @@ However, you'd always have the FOOTER row as last row and you'd normally begin w
 Note that SmartFocus' placeholders for Links ([EMV LINK]13[/ EMV LINK]) won't work when previewing in the browser, but they can be tested by sending yourself a test email through SmartFocus.
 
 #### Images:
+- Feature row: 570px wide and should have the bar cut out at the bottom. If the image is a gif the bar at the bottom should be made the colour of the row it's used in. If it's not a gif then make it a png and make the bar transparent.
+The height of the bar is 25px and it should be 520px wide, leaving 25px on each side of the bar (based on an image width of 570px).
+The height of the image is automatically calculated according to the images' aspect ratio.
+- Small rows : should be square and be 275px by 275px.
+- Quicklinks row: 129px wide. All images should have the same height.
+- Resources 2 column rows: 275px wide. All images should have the same height.
+- Resources 3 column row: 176px wide. All images should have the same height.
+- Questionnaire row: 176px wide. All images should have the same height.
+- Icon row:  176px wide. All images should have the same height.
+- 2x2 Resources row: Square images. 275px by 275px.
+
+Resrouces 3 column row, icon row and questionnaire rows ideally have square images.
+
 Images should be uploaded to the `email-assets.comicrelief.com` S3 bucket inside the `2017` folder.
 (towards the end of 2018 the email assets outside the 2017 folder will be deleted in order to clean up the bucket). 
 Inside the 2017 folder the images can be placed inside any of the folders the image belongs to. By right clicking on the image file the source link for the image can be retrieved.
