@@ -45,6 +45,7 @@ However, you'd always have the FOOTER row as last row and you'd normally begin w
 Note that SmartFocus' placeholders for Links ([EMV LINK]13[/ EMV LINK]) won't work when previewing in the browser, but they can be tested by sending yourself a test email through SmartFocus.
 
 #### Images:
+Sizes for sr18:
 - Feature row: 570px wide and should have the bar cut out at the bottom. If the image is a gif the bar at the bottom should be made the colour of the row it's used in. If it's not a gif then make it a png and make the bar transparent.
 The height of the bar is 25px and it should be 520px wide, leaving 25px on each side of the bar (based on an image width of 570px).
 The height of the image is automatically calculated according to the images' aspect ratio.
