@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>color converter</title>
+</head>
+<body>
+<div>
+<label>Convert RGB to Hex codes</label><br>
+<p>Please use the format given in the input below.</p>
+<textarea id="input" style="width: 600px; height: 400px;">
+  {
+  "highlight-red" : [255, 115, 118],
+  "highlight-orange" : [255, 172, 78],
+  "highlight-yellow" : [255, 237, 0],
+  "highlight-green" : [185, 226, 0],
+  "highlight-blue" : [63, 199, 249],
+  "highlight-magenta" : [255, 65, 180],
+  "highlight-purple" : [ 215, 158, 216],
+  "highlight-teal" : [37, 202, 210],
+  "red" : [229, 49, 56],
+  "orange" : [252,123,57],
+  "yellow" : [255, 199, 0],
+  "green" : [121, 172, 43],
+  "blue" : [42, 114, 183],
+  "magenta" : [198, 3, 124],
+  "purple" : [120, 54, 140],
+  "teal" : [94, 194, 234],
+  "dark-red" : [193, 44, 37],
+  "dark-orange" : [234, 91, 12],
+  "dark-yellow" : [215, 171, 40],
+  "dark-green" : [26, 113, 53],
+  "dark-blue" : [28, 64, 161],
+  "dark-magenta" : [113, 24, 83],
+  "dark-purple" : [86, 33, 122],
+  "dark-teal" : [23, 109, 142]
+} 
+</textarea>
+<button onClick="convert()">convert</button>
+</div>
+<ul id="hexcolours"></ul>
+<div id="result"></div>
+<script>
+
+function componentToHex(c) {
+    var hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(r, g, b) {
+    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
+function convert() {
+  var rgb = JSON.parse(document.querySelector('#input').value);
+  var ul = document.querySelector('#hexcolours');
+  var hexObj = {};
+  for(var key in rgb) {
+    var r = rgb[key][0], 
+        g = rgb[key][1],
+        b = rgb[key][2];
+    var hex = rgbToHex(r, g, b);
+    hexObj[key] = hex;
+    var li = document.createElement('li');
+    var div = document.createElement('div');
+    li.innerHTML = `${key} : ${hex} <div style="width: 30px; height: 30px; background-color:${hex};"></div>`;
+    ul.appendChild(li);
+  }
+  
+
+  var str = JSON.stringify(hexObj, null, 2); // spacing level = 2
+  document.querySelector('#result').innerHTML = str;
+}
+
+</script>
+ 
+</body>
+</html>
+
