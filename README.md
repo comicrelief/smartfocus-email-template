@@ -48,9 +48,9 @@ Note that SmartFocus' placeholders for Links ([EMV LINK]13[/ EMV LINK]) won't wo
 
 #### Images:
 Sizes for the cr and sr18 templates:
-- Feature row: 570px wide and should have the bar cut out at the bottom. If the image is a gif the bar at the bottom should be made the colour of the row it's used in. If it's not a gif then make it a png and make the bar transparent.
-The height of the bar is 25px and it should be 520px wide, leaving 25px on each side of the bar (based on an image width of 570px).
-The height of the image is automatically calculated according to the images' aspect ratio.
+- Feature row: 570px wide. The height of the image is automatically calculated according to the images' aspect ratio.
+For the SR18 template: The image should have the bar cut out at the bottom. If the image is a gif, the bar at the bottom should be made the colour of the row it's used in. If it's not a gif then make it a png and make the bar transparent. (The height of the bar is 25px and it should be 520px wide, leaving 25px on each side of the bar (based on an image width of 570px)).
+
 - Small rows : should be square and be 275px by 275px.
 - Quicklinks row: 129px wide. All images should have the same height.
 - Resources 2 column rows: 275px wide. All images should have the same height.
