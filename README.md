@@ -2,18 +2,18 @@
 
 This is the main email template for our campaign and 365 emails that are sent out via SmartFocus.
 
-Preview: https://smartfocus-email-template.netlify.com/
+Preview: https://smartfocus-email-template.netlify.com/cr.html
+
+Comic Relief (365) template with frequently used rows already there:
+https://smartfocus-email-template.netlify.com/cr-start.html
 
 Sport Relief template:
 https://smartfocus-email-template.netlify.com/sr18.html
 
-Sport Relief template with frequently used rows already there:
-https://smartfocus-email-template.netlify.com/sr18-start.html
-
 
 ## How to use the template:
 
-- Go to: https://smartfocus-email-template.netlify.com/sr18.html
+- Go to: https://smartfocus-email-template.netlify.com/cr.html
 - Right-click with your mouse and select something along the lines of "view page source"
 - A new tab / window /pop-up will be opened with the template's markup.
 
@@ -34,6 +34,7 @@ There are parts to an email that should always be copied in:
 
 Between the ROWS START HERE comment and the ROWS END HERE comment rows can be added in different order.
 However, you'd always have the FOOTER row as last row and you'd normally begin with the PRE-HEADER and LOGO rows.
+For an easy start use the `cr-start.html` file and place any other row from the `cr.htm` file between the logo and footer rows.
 
 #### Where to copy and previewing:
 - open up your favourite text editor (just open up notepad if you're on a Windows machine)
@@ -45,7 +46,7 @@ However, you'd always have the FOOTER row as last row and you'd normally begin w
 Note that SmartFocus' placeholders for Links ([EMV LINK]13[/ EMV LINK]) won't work when previewing in the browser, but they can be tested by sending yourself a test email through SmartFocus.
 
 #### Images:
-Sizes for sr18:
+Sizes for the cr and sr18 templates:
 - Feature row: 570px wide and should have the bar cut out at the bottom. If the image is a gif the bar at the bottom should be made the colour of the row it's used in. If it's not a gif then make it a png and make the bar transparent.
 The height of the bar is 25px and it should be 520px wide, leaving 25px on each side of the bar (based on an image width of 570px).
 The height of the image is automatically calculated according to the images' aspect ratio.
