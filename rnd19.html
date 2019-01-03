@@ -1,0 +1,915 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet" type="text/css">
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Anton|Montserrat:500,700,800');
+      @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v12/JTURjIg1_i6t8kCHKm45_ZpC3gnD_vx3rCs.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: 'Anton';
+        font-style: normal;
+        font-weight: 500;
+        src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v9/1Ptgg87LROyAm3Kz-C8CSKlv.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      th { font-weight:normal;}
+      /* Outlook link fix */
+      #outlook a {padding:0;}
+      /* Hotmail background & line height fixes */
+      .ExternalClass {width:100% !important;}
+      .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font,
+      .ExternalClass td, .ExternalClass div {line-height: 100%;}
+      .ExternalClass p {margin-bottom:0; margin:0}
+      /* Image borders & formatting */
+      img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;} 
+      a img {border:none;} 
+      /* Re-style iPhone automatic links (eg. phone numbers) */
+      .applelinks a {color:#222222; text-decoration: none;}
+      /* Hotmail symbol fix for mobile devices */
+      .ExternalClass img[class^=Emoji] { width: 10px !important; height: 10px !important; display: inline !important; } 
+      table { border-collapse:collapse !important;}
+      th {mso-table-lspace:0 !important; mso-table-rspace:0 !important;} 
+      th[class=fr-journey-arrow-mobile] {display: none !important;}
+      th[class=fr-journey-arrow-desktop] {display: table-cell !important;}
+      img[class=fr-journey-arrow-desktop-img] {display: inline !important;}
+      /* Media Query for mobile */
+      @media screen and (max-width: 600px) {
+        *[class=mobile-only]{display:block !important;}
+        *[class=mobile-block]{display:block !important; margin: 0 auto !important; valign: middle;}
+        *[class=emailwrapto33pc]{width:33.33333% !important; height:auto !important;}
+        *[class=mobpadding] {width: 15px !important;}
+        *[class=stacked] {width: 100%!important; float: left!important;}
+        *[class=centred] { margin: 0 auto !important; }
+        *[class=pre-header] {width: 100% !important; text-align: center; display: block;}
+        *[class=logo] { margin: 0 auto !important; width: 130px  !important; height: auto !important;}
+        p[class=p-footer]{margin-top:0px !important;} 
+        p[class=center-align] {text-align: center !important;}
+        img[class=joinus-bookend]{display:none !important;}
+        /* This resizes tables and images to be 100% wide with a proportionate width */
+        table[class=emailwrapto100pc], img[class=emailwrapto100pc]{width:100% !important; height:auto !important;}
+        table[class=emailwrapto75pc], img[class=emailwrapto75pc],th[class=emailwrapto75pc]{width:75% !important; height:auto !important;}
+        table[class=emailwrapto50pc], img[class=emailwrapto50pc],th[class=emailwrapto50pc]{width:50% !important; height:auto !important;}
+        table[class=emailwrapto320px], img[class=emailwrapto320px],th[class=emailwrapto320px]{width:320px !important; height:auto !important;}
+        table[class=emailwrapto320px-2], img[class=emailwrapto320px-2],th[class=emailwrapto320px-2]{width:320px !important; height:auto !important; margin-bottom:30px !important;}
+        table[class=quicklink-margin], img[class=quicklink-margin],th[class=quicklink-margin]{margin-bottom:30px !important;}
+        img[class=quicklink-padding-25],th[class=quicklink-padding-25]{width:25px !important;}
+        img[class=quicklink-padding-30],th[class=quicklink-padding-30]{width:30px !important;}
+        th[class=fr-journey-img]{padding-top:94px !important; width: 100% !important;}
+        th[class=fr-journey-text]{position:absolute !important; top:0 !important; left: 0 !important; width: 90% !important; padding-left: 5% !important; padding-right: 5% !important;}
+        th[class=fr-journey]{float:left !important; width:100% !important;}
+        th[class=fr-journey-text-right] {width: 90% !important; padding-left: 5% !important; padding-right: 5% !important; padding-top: 10px !important;}
+        th[class=fr-journey-img-right] {width: 100% !important; padding-bottom: 20px !important;}
+        th[class=fr-journey-arrow] { height: 30px !important;}
+        th[class=fr-journey-arrow-desktop] {height: 30px !important;}
+        th[class=copy-height-mobile] {height:auto !important;}
+        img[class=fr-journey-arrow-desktop-img] {display: none !important;}
+        img[class=mobileheight]{height:0px;}
+        /* Hide stuff on mobiles */
+        table[class=emailnomob],tr[class=emailnomob],th[class=emailnomob],img[class=emailnomob],span[class=emailnomob]{display:none !important;}
+        th[class=emailcolsplit]{width:100%!important; float:left!important;}
+        a[class=emailmobbutton]{display:block !important;font-size:16px !important; font-weight:bold !important; padding:6px 4px 8px 4px !important; line-height:18px !important; background:#dddddd !important; border-radius:5px !important; margin:10px auto;width:70%; text-align:center; color:#111 !important; text-decoration:none; text-shadow:#ffffff 1px 0 0 ;}
+        a[class="button"]{letter-spacing: 0 !important;}
+        /* This resizes body text for mobiles */
+        span[class=emailbodytext],a[class=emailbodytext],p[class=emailbodytext]{padding-left:10px !important; padding-right:10px !important;}
+        th[class=bodycopypadding]{padding-left:20px!important; padding-right:20px!important;}
+        span[class=emailh2],a[class=emailh2]{}
+        span[class=emailh2] {}
+        th[class=mobile-padding-top] {padding-left:18px!important; padding-top:18px!important;}
+        th[class=subpodimage]{width:100%!important; float:left!important;}
+        th[class=subpodimage-padding-top]{width:100%!important; float:left!important; padding-top:15px !important;}
+        th[class=subpodcopy]{width:100% !important; float:left!important;}
+        *[class=quicklinks]{width: 100% !important; float:left !important; padding: 0% !important;}
+        tr[class=join-us-table]{height:80px !important;}
+        th[class=emailwrapto100pc-footer]{width:100% !important; height:auto !important; padding-top:0px !important;}
+        th[class=emailwrapto100pc]{width:100% !important;}
+        th[class=subpodimage-reverse]{width:100%!important; float:left!important; position:absolute!important; left: 0px !important; top:30px!important;}
+        th[class=subpodcopy-reverse]{width:100%!important; float:left!important; padding-top:255px!important;}
+        *[class=mob-header-img]{width: 80px !important; height: auto !important;}
+        *[class=mobile-only-padding]{padding-top:20px !important; width:100% !important;}
+        *[class=mobile-padding]{ padding-left: 15px !important; padding-right: 15px !important;}
+        *[class=mobile-centred] { text-align: center !important;}
+      }
+    </style>
+  </head>
+  <body style="padding:0; margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:100%; min-width:100%;">
+  <!-- For email clients that ignore the body tag -->
+  <table cellpadding="0" cellspacing="0" border="0" width="100%" valign="top" align="center">
+    <tbody>
+      <tr>
+        <th>
+          <table align="center" cellpadding="0" cellspacing="0" border="0" valign="top" width="92%" style="font-family: Montserrat, Helvetica, Arial, sans-serif; font-size:16px;">
+            <tbody>
+              <!-- ROWS START HERE -->
+              <!-- PRE-HEADER -->
+              <!-- row's background colour 2x -->
+              <tr bgcolor="#fff" style="background-color:#fff;">
+                <!-- end row background colour -->
+                <th height="30" style="padding:0px;">
+                  <table width="600" align="center" border="0" cellpadding="0" cellspacing="0" valign="top" class="emailwrapto100pc" style="font-size:16px; line-height:22px; color:#555555; font-family: Montserrat, Helvetica, Arial, sans-serif;">
+                    <tr>
+                      <th width="15" align="center" valign="top" class="mobpadding" style="padding:0;">
+                        <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15"> 
+                      </th>
+                      <!-- text - change font-size, color etc 2x (in <th> and in <span>)-->
+                      <th class="pre-header" width="100%" style="font-family: Montserrat, Helvetica, Arial, sans-serif; font-size:11px; text-align:right; line-height:17px; color:#555555; margin-top:17px; margin-bottom:17px;">
+                        <span class="center-align" style="font-family: Montserrat, Helvetica, Arial, sans-serif; font-size:11px; text-align:right; line-height:17px; color:#555555; margin-top:17px; margin-bottom:17px;">
+                          Trouble viewing the email?
+                          <!-- link -->
+                          <a href="[EMV LINK]22[EMV /LINK]" style="color:#555555;" target="_blank">
+                          See the email in full
+                          </a>
+                        </span>
+                      </th>
+                      <!-- end text -->
+                      <th width="15" align="center" valign="top" class="mobpadding" style="padding:0;">
+                        <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15"> 
+                      </th>
+                    </tr>
+                  </table>
+                </th>
+              </tr>
+              <!-- END OF PRE-HEADER -->
+              <!-- LOGO ROW -->
+              <tr>
+                <!-- row's background colour 2x -->
+                <th bgcolor="#ffffff" style="background-color:#ffffff; " align="center" valign="top">
+                  <!-- end row background colour -->
+                  <table width="600" align="center" border="0" cellpadding="0" cellspacing="0" valign="top" class="emailwrapto100pc" style="font-size:16px; line-height:22px; color:#555555; font-family: Montserrat, Helvetica, Arial, sans-serif;">
+                    <tbody>
+                      <!-- logo block --> 
+                      <tr align="center" valign="top">
+                        <th align="center" valign="top" class="mob-header-img" style="padding:0;">
+                          <!-- Logo link--> 
+                          <a href="https://www.comicrelief.com/rednoseday" target="_blank">
+                            <!-- Logo --> 
+                            <img alt="Comic Relief logo" src="https://s3.amazonaws.com/email-assets.comicrelief.com/2017/Logos/RND19_logo.png" style="display: block; border-width: 0px; border-style: solid; margin: 0 auto;" width="80" >
+                          </a>
+                        </th>
+                      </tr>
+                      <!-- end logo block -->
+                      <!-- spacer bottom -->
+                      <tr>
+                        <th height="20" width="100%" align="center" valign="top" style="padding:0;"> 
+                          <img alt="spacer" border="0" height="20" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                        </th>
+                      </tr>
+                      <!-- end spacer bottom -->
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+              <!-- END OF LOGO ROW-->
+              <!-- TITLE, COPY, BUTTON ROW -->
+              <tr>
+                <!-- whole row's background colour 2x -->
+                <th align="center" bgcolor="#fff" style="background-color:#fff;" valign="top">
+                  <!-- end whole row background colour -->
+                  <table width="600" align="center" border="0" cellpadding="0" cellspacing="0" valign="top" class="emailwrapto100pc" style="font-size:16px; line-height:22px; color:#2e002d; font-family: Montserrat, Helvetica, Arial, sans-serif;">
+                    <tbody>
+                     <!-- content block -->
+                      <tr>
+                        <th width="15" align="center" valign="top" class="mobpadding" style="padding:0;">
+                          <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15">
+                        </th>
+                        <!-- inner container -->
+                        <!-- change bg color 2x -->
+                        <th bgcolor="d2d2d2" style="background-color: #d2d2d2;">
+                          <table>
+                            <tr>
+                              <th width="25" align="center" valign="top" class="mobpadding" style="padding:0;">
+                                <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15">
+                              </th>
+                              <th>
+                                <table>
+                                  <!-- spacer above title -->
+                                  <tr align="center" valign="top">
+                                    <th height="45" align="center" valign="top" colspan="3" style="padding:0;">
+                                      <img alt="spacer" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                                    </th>
+                                  </tr>
+                                  <!-- end spacer above title -->
+                                  <!-- title block -->
+                                  <tr align="center" valign="top">
+                                    <!-- text - change font-size, color etc 2x (in <th> and in <span>)-->
+                                    <th style="font-size:52px; line-height:55px; color:#fff; font-family: Anton, Helvetica, Arial, sans-serif; padding:0; margin:0;" align="center" valign="top">
+                                      <span style="font-size:52px; line-height:55px; color:#fff; font-family: Anton, Helvetica, Arial, sans-serif; padding:0; margin:0; font-weight:bold; text-transform: uppercase;">
+                                      TITLE, COPY, BUTTON ROW
+                                      </span>
+                                    </th>
+                                    <!-- end text -->
+                                  </tr>
+                                  <!-- end title block-->
+                                  <!-- spacer between -->
+                                  <tr align="center" valign="top">
+                                    <th height="30" align="center" valign="top" colspan="3" style="padding:0;">
+                                      <img alt="spacer" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                                    </th>
+                                  </tr>
+                                  <!-- end spacer between -->
+                                  <!-- copy block -->
+                                  <tr align="center" valign="top">
+                                    <!-- text - change font-size, color etc 2x (in <th> and in <span>)-->
+                                    <th style="line-height:24px; color:#fff; font-family: Montserrat, Helvetica, Arial, sans-serif; padding:0; margin:0; font-size:18px; font-weight:none;" align="center" valign="top"> 
+                                      <span style="font-size:18px; line-height:24px; color:#fff; font-family: Montserrat, Helvetica, Arial, sans-serif; padding:0; margin:0;">
+                                      Comic Relief is all about making lives better, starting with your own, and it's back from 17th to 23rd March for a whole week of epic activity and one exciting national challenge.
+                                      <br><br>
+                                      Anyone can join in so, as an amazing Red Nose Day fundraiser, we'd love you to get active and raise money in whatever way suits you. To find out more and get a head start, pre-order your free Fundraising Pack.
+                                      </span> 
+                                    </th>
+                                    <!-- end text -->
+                                  </tr>
+                                  <!-- end copy block -->
+                                  <!-- spacer between -->
+                                  <tr align="center" valign="top">
+                                    <th height="45" align="center" valign="top" colspan="3" style="padding:0;">
+                                      <img alt="spacer" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                                    </th>
+                                  </tr>
+                                  <!-- end spacer between -->
+                                  <!-- button block -->
+                                  <tr align="center" valign="top">
+                                    <!-- actual button -->
+                                    <th align="center" colspan="3" valign="middle">
+                                      <table align="center" border="0" cellpadding="0" cellspacing="0" style="text-decoration:none;" valign="middle">
+                                        <tbody>
+                                          <tr>
+                                            <!-- change background colour in <th> and font colour in both <th> and <a> -->
+                                            <th align="center" style="padding:20px 40px; text-decoration:none; font-size:18px; line-height:20px; color:#fff; background-color: transparent; border:1px solid #fff; font-family: Montserrat, Helvetica, Arial, sans-serif; display: block; border-radius:60px" valign="middle">
+                                              <!-- button link and text -->
+                                              <a class="button" href="[EMV LINK]27[EMV /LINK]" style="color:#ffffff; text-decoration:none; font-weight:bold; display:block; text-transform: uppercase; letter-spacing: 0.1em;" target="_blank">
+                                              PRE-ORDER YOUR PACK
+                                              </a>
+                                            </th>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </th>
+                                    <!-- end actual button -->
+                                  </tr>
+                                  <!-- end button block -->
+                                  <!-- spacer underneath button-->
+                                  <tr align="center" valign="top">
+                                    <th height="45" align="center" valign="top" colspan="3" style="padding:0;">
+                                      <img alt="spacer" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                                    </th>
+                                  </tr>
+                                  <!-- end spacer underneath button -->
+                                </table>
+                              </th>
+                              <th width="25" align="center" valign="top" class="mobpadding" style="padding:0;">
+                                <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15">
+                              </th>
+                            </tr>
+                          </table>
+                        </th>
+                        <!-- end inner container -->
+                        <th width="15" align="center" valign="top" class="mobpadding" style="padding:0;">
+                          <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15">
+                        </th>
+                      </tr>
+                      <!-- end content block -->
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+              <!-- END TITLE, COPY, BUTTON ROW -->
+              <!-- TITLE AND COPY ONLY ROW -->
+              <tr>
+                <!-- whole row's background colour 2x -->
+                <th align="center" bgcolor="#fff" style="background-color:#fff;" valign="top">
+                  <!-- end whole row background colour -->
+                  <table width="600" align="center" border="0" cellpadding="0" cellspacing="0" valign="top" class="emailwrapto100pc" style="font-size:16px; line-height:22px; color:#2e002d; font-family: Montserrat, Helvetica, Arial, sans-serif;">
+                    <tbody>
+                     <!-- content block -->
+                      <tr>
+                        <th width="15" align="center" valign="top" class="mobpadding" style="padding:0;">
+                          <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15">
+                        </th>
+                        <!-- inner container -->
+                        <!-- change bg color 2x -->
+                        <th bgcolor="#22cfd8" style="background-color: #22cfd8;">
+                          <table>
+                            <tr>
+                              <th width="25" align="center" valign="top" class="mobpadding" style="padding:0;">
+                                <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15">
+                              </th>
+                              <th>
+                                <table>
+                                  <!-- spacer above title -->
+                                  <tr align="center" valign="top">
+                                    <th height="45" align="center" valign="top" colspan="3" style="padding:0;">
+                                      <img alt="spacer" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                                    </th>
+                                  </tr>
+                                  <!-- end spacer above title -->
+                                  <!-- title block -->
+                                  <tr align="center" valign="top">
+                                    <!-- text - change font-size, color etc 2x (in <th> and in <span>)-->
+                                    <th style="font-size:52px; line-height:55px; color:#2c0230; font-family: Anton, Helvetica, Arial, sans-serif; padding:0; margin:0;" align="center" valign="top">
+                                      <span style="font-size:52px; line-height:55px; color:#2c0230; font-family: Anton, Helvetica, Arial, sans-serif; padding:0; margin:0; font-weight:bold; text-transform: uppercase;">
+                                      TITLE AND COPY ONLY ROW
+                                      </span>
+                                    </th>
+                                    <!-- end text -->
+                                  </tr>
+                                  <!-- end title block-->
+                                  <!-- spacer between -->
+                                  <tr align="center" valign="top">
+                                    <th height="30" align="center" valign="top" colspan="3" style="padding:0;">
+                                      <img alt="spacer" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                                    </th>
+                                  </tr>
+                                  <!-- end spacer between -->
+                                  <!-- copy block -->
+                                  <tr align="center" valign="top">
+                                    <!-- text - change font-size, color etc 2x (in <th> and in <span>)-->
+                                    <th style="line-height:24px; color:#2c0230; font-family: Montserrat, Helvetica, Arial, sans-serif; padding:0; margin:0; font-size:18px; font-weight:none;" align="center" valign="top"> 
+                                      <span style="font-size:18px; line-height:24px; color:#2c0230; font-family: Montserrat, Helvetica, Arial, sans-serif; padding:0; margin:0;">
+                                      Comic Relief is all about making lives better, starting with your own, and it's back from 17th to 23rd March for a whole week of epic activity and one exciting national challenge.
+                                      </span> 
+                                    </th>
+                                    <!-- end text -->
+                                  </tr>
+                                  <!-- end copy block -->
+                                  <!-- spacer underneath copy-->
+                                  <tr align="center" valign="top">
+                                    <th height="45" align="center" valign="top" colspan="3" style="padding:0;">
+                                      <img alt="spacer" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                                    </th>
+                                  </tr>
+                                  <!-- end spacer underneath copy -->
+                                </table>
+                              </th>
+                              <th width="25" align="center" valign="top" class="mobpadding" style="padding:0;">
+                                <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15">
+                              </th>
+                            </tr>
+                          </table>
+                        </th>
+                        <!-- end inner container -->
+                        <th width="15" align="center" valign="top" class="mobpadding" style="padding:0;">
+                          <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15">
+                        </th>
+                      </tr>
+                      <!-- end content block -->
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+              <!-- END TITLE AND COPY ONLY ROW -->
+              <!-- IMAGE ONLY ROW -->
+              <tr>
+                <!-- whole row's background colour 2x -->
+                <th align="center" bgcolor="#fff" style="background-color:#fff;" valign="top">
+                  <!-- end whole row background colour -->
+                  <table width="600" align="center" border="0" cellpadding="0" cellspacing="0" valign="top" class="emailwrapto100pc" style="font-size:16px; line-height:22px; color:#2e002d; font-family: Montserrat, Helvetica, Arial, sans-serif;">
+                    <tbody>
+                      <!-- image block  -->
+                      <tr align="center" valign="top">
+                        <th width="15" align="center" valign="top" class="mobpadding" style="padding:0;">
+                          <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15"> 
+                        </th>
+                        <!-- actual image -->
+                        <th width="100%" align="center" valign="top" class="emailwrapto100pc" style="padding:0;">
+                          <!-- image link --> 
+                          <a href="https://www.comicrelief.com" style="text-decoration: none; padding:0;" target="_blank">
+                            <!-- image - change src (source) and alt text-->
+                            <img alt="Alt text here" border="0" src="https://s3.amazonaws.com/email-assets.comicrelief.com/2017/template/CR18_feature_placeholder.jpg" width="570" class="emailwrapto100pc" style="display:block;"> 
+                          </a>
+                        </th>
+                        <!-- end actual image -->
+                        <th width="15" align="center" valign="top" class="mobpadding" style="padding:0;"> 
+                          <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15"> 
+                        </th>
+                      </tr>
+                      <!-- end image block-->
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+              <!-- END IMAGE ONLY ROW -->
+              <!-- SPACER ONLY ROW -->
+              <tr>
+                <!-- whole row's background colour 2x -->
+                <th align="center" bgcolor="#fff" style="background-color:#fff;" valign="top">
+                  <!-- end whole row background colour -->
+                  <!-- spacer background colour 2x -->
+                  <table bgcolor="#fff" width="570" align="center" border="0" cellpadding="0" cellspacing="0" valign="top" class="emailwrapto100pc" style="font-size:16px; line-height:22px; color:#2e002d; font-family: Montserrat, Helvetica, Arial, sans-serif; background-color: #fff;">
+                  <!-- end spacer background colour 2x -->
+                    <tbody>
+                      <!-- spacer -->
+                      <tr align="center" valign="top">
+                        <th height="70" align="center" valign="top" colspan="3" style="padding:0;">
+                          <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                        </th>
+                      </tr>
+                      <!-- end spacer -->
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+              <!-- END SPACER ONLY ROW -->
+              <!-- COLOUR SMALL ROW TITLE INSIDE IMAGE LEFT -->
+              <tr>
+                <!-- row's background colour 2x -->
+                <th align="center" valign="top" height="100%" bgcolor="#fff;" style="background-color:#fff;">
+                <!-- end row background colour -->
+                  <table width="600" align="center" border="0" cellpadding="0" cellspacing="0" valign="top" class="emailwrapto100pc">
+                    <tbody>
+                      <!-- container -->
+                      <tr align="center" valign="top">
+                        <th align="center" valign="top">
+                          <table width="600" align="left" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
+                            <tbody>
+                              <tr>
+                                <th width="15" align="center" valign="top" class="mobpadding" style="padding:0; ">
+                                  <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15">
+                                </th>
+                                <!-- inner container -->
+                                <th>
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0"  class="emailwrapto100pc">
+                                    <tbody>
+                                      <!-- image and copy container -->
+                                      <tr>
+                                        <!-- image block -->
+                                        <!-- change image block's background colour 2x -->
+                                        <th bgcolor="#ffffff" style="background-color:#FC59CE;" width="285" class="subpodimage" align="center" valign="top">
+                                        <!-- end image block background colour -->
+                                          <table width="285" height="285" border="0" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                              <tr>
+                                                <th width="285" align="center">
+                                                  <!-- image link --> 
+                                                  <a href="http://www.comicrelief.com" target="_blank" style="padding:0;">
+                                                    <!-- image change src (source) and alt text-->
+                                                    <img class="emailwrapto100pc" alt="Alt text here" border="0" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/square_245x245.jpg" style="display: block;" width="190">
+                                                  </a>
+                                                </th>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </th>
+                                        <!-- end of image block --> 
+                                        <!-- content block -->
+                                        <!-- change conent block's background colour 2x also in table below -->
+                                        <th bgcolor="#FFE400" style="background-color:#FFE400;" class="subpodcopy" align="right" valign="top" width="285">
+                                        <!-- end content block background colour -->
+                                          <!-- change background colour here 2x in <table> - also change font color, font size etc  -->
+                                          <table bgcolor="#FFE400" border="0" cellspacing="0" cellpadding="0" style="width:285px;font-size:18px; line-height:24px; font-family: Montserrat, Helvetica, Arial, sans-serif; background-color:#FFE400;" class="emailwrapto100pc" align="right">
+                                            <!-- content inner container -->
+                                            <tr align="right" valign="top">
+                                              <!-- padding left --> 
+                                              <th width="25" align="center" valign="top" style="padding:0;">
+                                                <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="25" />
+                                              </th>
+                                              <!-- end padding left --> 
+                                              <th>
+                                                <table class="emailwrapto100pc" border="0" cellspacing="0" cellpadding="0" align="left" valign="top">
+                                                  <!-- spacer above title -->
+                                                  <tr align="center" valign="top">
+                                                    <th class="pre-title-padding" height="20" align="center" valign="top" colspan="3" style="padding:0;">
+                                                      <img alt="" border="0" height="20" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                                                    </th>
+                                                  </tr>
+                                                  <!-- end spacer above title -->
+                                                  <!-- title block -->
+                                                  <tr align="center" valign="top">
+                                                    <!-- text - change font-size, color etc 2x (in <th> and in <span>)-->
+                                                    <th colspan="3" align="left" valign="top" style="font-size:22px; line-height:24px; color:#2C0230; font-family: Anton, Helvetica, Arial, sans-serif; font-weight:bold;" class="mobile-only-padding">
+                                                      <span style="font-size:22px; line-height:24px; color:#2C0230; font-family: Anton, Helvetica, Arial, sans-serif; font-weight:bold; padding:0; margin:0; text-transform:uppercase;">
+                                                      Colour Small Row Title inside img left
+                                                      </span>
+                                                    </th>
+                                                    <!-- end text -->
+                                                  </tr>
+                                                  <!-- end title block -->
+                                                  <!-- spacer between title and copy -->
+                                                  <tr align="center" valign="top">
+                                                    <th class="pre-title-padding" height="20" align="center" valign="top" colspan="3" style="padding:0;">
+                                                      <img alt="" border="0" height="20" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                                                    </th>
+                                                  </tr>
+                                                  <!-- end spacer between title and copy-->
+                                                  <!-- copy -->
+                                                  <tr align="left" valign="top">
+                                                    <!-- text - change font-size, color etc 2x (in <th> and in <span>)-->
+                                                    <th class="emailwrapto100pc" style="text-align:left; font-size:18px; line-height:24px; color:#2C0230 font-family: Montserrat, Helvetica, Arial, sans-serif;  padding:0; margin:0; display:block; text-align:left; max-height:160px; overflow-y:hidden;" width="235">
+                                                      <span width="235" style="font-size:16px; line-height:20px; color:#2C0230 font-family: Montserrat, Helvetica, Arial, sans-serif; padding:0; margin:0; display:block; text-align:left;" class="centeredcopymobile">
+                                                      Fusce convallis metus id felis luctus adipiscing. Maecenas vestibulum mollis diam. Nunc nonummy metus. Quisque id mi
+                                                      </span>
+                                                    </th>
+                                                    <!-- end text -->     
+                                                  </tr>
+                                                  <!-- end copy -->
+                                                  <!-- spacer between copy and button -->
+                                                  <tr align="left" valign="top">
+                                                    <th class="emailwrapto100pc" height="20" align="right" valign="top" style="padding:0;">
+                                                      <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                                                    </th>
+                                                  </tr>
+                                                  <!-- end spacer between copy and button -->
+                                                  <!-- button -->
+                                                  <tr align="left" valign="top">
+                                                    <th>
+                                                      <table align="left" border="0" cellpadding="0" cellspacing="0" style="text-decoration:none;" valign="middle" width="235">
+                                                        <tr align="center" valign="top" >
+                                                          <!-- change background colour in <th> and font colour in both <th> and <a> -->
+                                                          <th align="center" bgcolor="#FEFD5A" style="padding: 15px 40px; text-decoration:none; font-size:15px; line-height:20px; color:#2C0230; background-color: #FEFD5A; font-family: Montserrat, Helvetica, Arial, sans-serif; display:block; border-radius:60px" valign="middle">
+                                                              <!-- button link and text -->
+                                                              <a class="button" href="http://www.google.com" style="color:#2C0230; text-decoration:none; font-weight:bold; display:block; text-transform: uppercase; letter-spacing: 0.05em;" target="_blank">
+                                                                Click here yup!
+                                                              </a>
+                                                          </th>
+                                                        </tr>
+                                                        <!-- spacer below button -->
+                                                        <tr align="left" valign="top">
+                                                          <th height="20" align="right" valign="top" style="padding:0;">
+                                                            <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                                                          </th>
+                                                        </tr>
+                                                        <!-- end spacer below button -->
+                                                      </table>
+                                                    </th>
+                                                  </tr>
+                                                  <!-- end button --> 
+                                                </table>
+                                              </th>
+                                              <!-- padding right --> 
+                                              <th width="25" align="center" valign="top" style="padding:0;">
+                                                <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="25" />
+                                              </th>
+                                              <!-- end padding right --> 
+                                            </tr>
+                                            <!-- end content inner container -->
+                                          </table>
+                                        </th>
+                                        <!-- end content block -->
+                                      </tr>
+                                      <!-- end image and copy container -->
+                                    </tbody>
+                                  </table>
+                                </th>
+                                <!-- end inner container change background color 2x -->
+                                <th width="15" align="center" valign="top" class="mobpadding" style="padding:0;">
+                                  <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15">
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                      </tr>
+                      <!-- end container -->
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+              <!-- END OF COLOUR SMALL ROW TITLE INSIDE IMAGE LEFT -->
+              <!-- COLOUR SMALL ROW TITLE INSIDE IMAGE RIGHT -->
+              <tr>
+                <!-- row's background colour 2x -->
+                <th align="center" valign="top" height="100%" bgcolor="#fff;" style="background-color:#fff;">
+                <!-- end row background colour -->
+                  <table width="600" align="center" border="0" cellpadding="0" cellspacing="0" valign="top" class="emailwrapto100pc">
+                    <tbody>
+                      <!-- container -->
+                      <tr align="center" valign="top">
+                        <th align="center" valign="top">
+                          <table dir="rtl" width="600" align="left" border="0" cellspacing="0" cellpadding="0" class="emailwrapto100pc">
+                            <tbody>
+                              <tr>
+                                <th width="15" align="center" valign="top" class="mobpadding" style="padding:0; ">
+                                  <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15">
+                                </th>
+                                <!-- inner container -->
+                                <th>
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0"  class="emailwrapto100pc">
+                                    <tbody>
+                                      <!-- image and copy container -->
+                                      <tr>
+                                        <!-- image block -->
+                                        <!-- change image block's background colour 2x -->
+                                        <th bgcolor="#4ECD57" style="background-color:#4ECD57;" width="285" class="subpodimage" align="center" valign="top">
+                                        <!-- end image block background colour -->
+                                          <table width="285" height="285" border="0" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                              <tr>
+                                                <th width="285" align="center">
+                                                  <!-- image link --> 
+                                                  <a href="http://www.comicrelief.com" target="_blank" style="padding:0;">
+                                                    <!-- image change src (source) and alt text-->
+                                                    <img class="emailwrapto100pc" alt="Alt text here" border="0" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/square_245x245.jpg" style="display: block;" width="190">
+                                                  </a>
+                                                </th>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </th>
+                                        <!-- end of image block --> 
+                                        <!-- content block -->
+                                        <!-- change conent block's background colour 2x also in table below -->
+                                        <th bgcolor="#22CFD8" style="background-color:#22CFD8;" class="subpodcopy" align="right" valign="top" width="285">
+                                        <!-- end content block background colour -->
+                                          <!-- change background colour here 2x in <table> - also change font color, font size etc  -->
+                                          <table bgcolor="#22CFD8" border="0" cellspacing="0" cellpadding="0" style="width:285px;font-size:18px; line-height:24px; font-family: Montserrat, Helvetica, Arial, sans-serif; background-color:#22CFD8" class="emailwrapto100pc" align="right">
+                                            <!-- content inner container -->
+                                            <tr align="right" valign="top">
+                                              <!-- padding left --> 
+                                              <th width="25" align="center" valign="top" style="padding:0;">
+                                                <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="25" />
+                                              </th>
+                                              <!-- end padding left --> 
+                                              <th>
+                                                <table class="emailwrapto100pc" border="0" cellspacing="0" cellpadding="0" align="left" valign="top">
+                                                  <!-- spacer above title -->
+                                                  <tr align="center" valign="top">
+                                                    <th class="pre-title-padding" height="20" align="center" valign="top" colspan="3" style="padding:0;">
+                                                      <img alt="" border="0" height="20" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                                                    </th>
+                                                  </tr>
+                                                  <!-- end spacer above title -->
+                                                  <!-- title block -->
+                                                  <tr align="center" valign="top">
+                                                    <!-- text - change font-size, color etc 2x (in <th> and in <span>)-->
+                                                    <th colspan="3" align="left" valign="top" style="font-size:22px; line-height:24px; color:#2C0230; font-family: Anton, Helvetica, Arial, sans-serif; font-weight:bold;" class="mobile-only-padding">
+                                                      <span style="font-size:22px; line-height:24px; color:#2C0230; font-family: Anton, Helvetica, Arial, sans-serif; font-weight:bold; padding:0; margin:0; text-transform:uppercase; direction:ltr;">
+                                                      Colour Small Row Title inside img right
+                                                      </span>
+                                                    </th>
+                                                    <!-- end text -->
+                                                  </tr>
+                                                  <!-- end title block -->
+                                                  <!-- spacer between title and copy -->
+                                                  <tr align="center" valign="top">
+                                                    <th class="pre-title-padding" height="20" align="center" valign="top" colspan="3" style="padding:0;">
+                                                      <img alt="" border="0" height="20" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                                                    </th>
+                                                  </tr>
+                                                  <!-- end spacer between title and copy-->
+                                                  <!-- copy -->
+                                                  <tr align="left" valign="top">
+                                                    <!-- text - change font-size, color etc 2x (in <th> and in <span>)-->
+                                                    <th class="emailwrapto100pc" style="text-align:left; font-size:18px; line-height:24px; color:#2C0230 font-family: Montserrat, Helvetica, Arial, sans-serif;  padding:0; margin:0; display:block; text-align:left; max-height:160px; overflow-y:hidden;" width="235">
+                                                      <span width="235" style="font-size:16px; line-height:20px; color:#2C0230 font-family: Montserrat, Helvetica, Arial, sans-serif; padding:0; margin:0; display:block; text-align:left; direction:ltr;" class="centeredcopymobile">
+                                                      Fusce convallis metus id felis luctus adipiscing. Maecenas vestibulum mollis diam. Nunc nonummy metus. Quisque id mi
+                                                      </span>
+                                                    </th>
+                                                    <!-- end text -->     
+                                                  </tr>
+                                                  <!-- end copy -->
+                                                  <!-- spacer between copy and button -->
+                                                  <tr align="left" valign="top">
+                                                    <th class="emailwrapto100pc" height="20" align="right" valign="top" style="padding:0;">
+                                                      <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                                                    </th>
+                                                  </tr>
+                                                  <!-- end spacer between copy and button -->
+                                                  <!-- button -->
+                                                  <tr align="left" valign="top">
+                                                    <th>
+                                                      <table align="left" border="0" cellpadding="0" cellspacing="0" style="text-decoration:none;" valign="middle" width="235">
+                                                        <tr align="center" valign="top" >
+                                                          <!-- change background colour in <th> and font colour in both <th> and <a> -->
+                                                          <th align="center" bgcolor="#86E4E9" style="padding: 15px 40px; text-decoration:none; font-size:15px; line-height:20px; color:#2C0230; background-color:#86E4E9; font-family: Montserrat, Helvetica, Arial, sans-serif; display:block; border-radius:60px" valign="middle">
+                                                              <!-- button link and text -->
+                                                              <a class="button" href="http://www.google.com" style="color:#2C0230; text-decoration:none; font-weight:bold; display:block; text-transform: uppercase; letter-spacing: 0.05em; direction:ltr;" target="_blank">
+                                                                Click here yup!
+                                                              </a>
+                                                          </th>
+                                                        </tr>
+                                                        <!-- spacer below button -->
+                                                        <tr align="left" valign="top">
+                                                          <th height="20" align="right" valign="top" style="padding:0;">
+                                                            <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                                                          </th>
+                                                        </tr>
+                                                        <!-- end spacer below button -->
+                                                      </table>
+                                                    </th>
+                                                  </tr>
+                                                  <!-- end button --> 
+                                                </table>
+                                              </th>
+                                              <!-- padding right --> 
+                                              <th width="25" align="center" valign="top" style="padding:0;">
+                                                <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="25" />
+                                              </th>
+                                              <!-- end padding right --> 
+                                            </tr>
+                                            <!-- end content inner container -->
+                                          </table>
+                                        </th>
+                                        <!-- end content block -->
+                                      </tr>
+                                      <!-- end image and copy container -->
+                                    </tbody>
+                                  </table>
+                                </th>
+                                <!-- end inner container change background color 2x -->
+                                <th width="15" align="center" valign="top" class="mobpadding" style="padding:0;">
+                                  <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15">
+                                </th>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </th>
+                      </tr>
+                      <!-- end container -->
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+              <!-- END OF COLOUR SMALL ROW TITLE INSIDE IMAGE RIGHT -->
+              <!-- FOOTER ROW -->
+              <tr>
+                <!-- row's background colour 2x -->
+                <th align="center" bgcolor="#f2f2f2" style="background-color:#f2f2f2;" valign="top">
+                <!-- end row background colour -->
+                  <table width="600" align="center" border="0" cellpadding="0" cellspacing="0" valign="top" class="emailwrapto100pc" style="font-size:16px; line-height:22px; color:#2e002d; font-family: Montserrat, Helvetica, Arial, sans-serif;">
+                    <tbody>
+                      <!-- spacer top -->
+                      <tr align="center" valign="top">
+                        <th height="70" align="center" valign="top" colspan="3" style="padding:0;">
+                          <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                        </th>
+                      </tr>
+                      <!-- end spacer top -->
+                      <!-- container -->
+                      <tr align="center" valign="top" >
+                        <th width="15" align="center" valign="top" class="mobpadding" style="padding:0;">
+                          <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15">
+                        </th>
+                        <!-- inner container -->
+                        <th>
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0"  class="emailwrapto100pc">
+                            <tbody>
+                              <!-- social media icons -->
+                              <tr align="center" valign="top">
+                                <th width="100%">
+                                  <table width="50%" class="emailwrapto100pc">
+                                    <tbody>
+                                      <tr>
+                                        <!-- facebook -->
+                                        <th align="center" width="53" height="36" style="padding:0;" valign="top">
+                                          <!-- facebook link -->
+                                          <a href="https://www.facebook.com/comicrelief/" target="_blank">
+                                            <!-- icon change src (source) and alt text-->
+                                            <img alt="Facebook" border="0" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/Icons/social_icons_facebook.png" style="display: block; padding:0;" width="53" height="53">
+                                          </a>
+                                        </th>
+                                        <!-- twitter -->
+                                        <th align="center" width="53" height="36" style="padding:0;" valign="top">
+                                          <!-- twitter link -->
+                                          <a href="https://twitter.com/comicrelief" target="_blank">
+                                            <!-- icon change src (source) and alt text-->
+                                            <img alt="Twitter" border="0" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/Icons/social_icons_twitter.png" style="display: block;" width="53" height="53">
+                                          </a>
+                                        </th>
+                                        <!-- instagram -->
+                                        <th align="center" width="53" height="36" style="padding:0;" valign="top">
+                                          <!-- instagram link -->
+                                          <a href="https://www.instagram.com/comicrelief/" target="_blank">
+                                            <!-- icon change src (source) and alt text-->
+                                            <img alt="Instragram" border="0" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/Icons/social_icons_instagram.png" style="display: block;" width="53" height="53">
+                                          </a>
+                                        </th>
+                                        <!-- youtube -->
+                                        <th align="center" width="53" height="36" style="padding:0;" valign="top">
+                                          <!-- youtube link -->
+                                          <a href="https://www.youtube.com/comicrelief" target="_blank">
+                                             <!-- icon change src (source) and alt text-->
+                                            <img alt="YouTube" border="0" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/Icons/social_icons_youtube.png" style="display: block;" width="53" height="53">
+                                          </a>
+                                        </th>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </th>
+                              </tr>
+                              <!-- end social media icons -->
+                              <!-- spacer between social media block and links-->
+                              <tr>
+                                <th align="center" class="emailwrapto100pc" valign="top" height="30" style="padding:0;">
+                                  <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;">
+                                </th>
+                              </tr>
+                              <!-- end spacer between social media block and links-->
+                              <!-- links block -->
+                              <tr>
+                                <!-- change links color, font etc in both <th> tag and <a> tags -->
+                                <th class="emailwrapto100pc" colspan="3" style="padding:0px; color:#2e002d; font-size:14px; line-height:20px; text-align:center; font-family: Montserrat, Helvetica, Arial, sans-serif;">
+                                  <!-- unsubscribe link -->
+                                  <a href="[EMV LINK]64[EMV /LINK]" style="font-size:14px; line-height:20px; color:#2e002d; font-family: Montserrat, Helvetica, Arial, sans-serif; padding:0; margin:0; font-weight:normal; text-decoration: none; border-bottom: 1px solid #2e002d; display: inline-block; cursor: pointer;">
+                                  Unsubscribe 
+                                  </a>
+                                  <!-- divider -->
+                                  &nbsp;|&nbsp;
+                                  <!-- update preferences link -->
+                                  <a href="https://www.comicrelief.com/update-your-preferences" style="font-size:14px; line-height:20px; color:#2e002d; font-family: Montserrat, Helvetica, Arial, sans-serif; padding:0; margin:0; font-weight:normal; text-decoration: none; border-bottom: 1px solid #2e002d; display: inline-block; cursor: pointer;">
+                                  Update your preferences 
+                                  </a> 
+                                  <!-- divider -->
+                                  &nbsp;|&nbsp;
+                                  <!-- contact us link -->
+                                  <a href="https://www.comicrelief.com/contact-us" target="_blank" style="font-size:14px; line-height:20px; color:#2e002d; font-family: Montserrat, Helvetica, Arial, sans-serif; padding:0; margin:0; font-weight:normal; text-decoration: none; border-bottom: 1px solid #2e002d; display: inline-block; cursor: pointer;">
+                                  Contact us 
+                                  </a>
+                                  <!-- divider -->
+                                  &nbsp;|&nbsp;
+                                  <!-- privacy policy link -->
+                                  <a href="https://www.comicrelief.com/privacy-policy" target="_blank" style="font-size:14px; line-height:20px; color:#2e002d; font-family: Montserrat, Helvetica, Arial, sans-serif; padding:0; margin:0; font-weight:normal; text-decoration: none; border-bottom: 1px solid #2e002d; display: inline-block; cursor: pointer;">
+                                  Privacy Policy 
+                                  </a>
+                                </th>
+                              </tr>
+                              <!-- end of links block -->
+                              <!-- spacer between links and copyright -->
+                              <tr>
+                                <th align="center" class="emailwrapto100pc" height="20" valign="top" style="padding:0;">
+                                  <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;">
+                                </th>
+                              </tr>
+                              <!-- end spacer between links and copyright -->
+                              <!-- copyright block-->
+                              <tr>
+                                <!-- text - change font-size, color etc 2x (in <th> and in <span>)-->
+                                <th class="emailwrapto100pc" colspan="3" style="padding:0px; color:#2e002d; font-size:14px; line-height:20px; text-align:center; font-family: Montserrat, Helvetica, Arial, sans-serif;">
+                                  <span style="font-size:14px; line-height:20px; color:#2e002d; font-family: Montserrat, Helvetica, Arial, sans-serif; padding:0; margin:0;"> 
+                                  Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: Hanover House, 14 Hanover Square, London, W1S 1HP.
+                                  </span>
+                                </th>
+                              </tr>
+                              <!-- end copyright block-->
+                              <!-- spacer between copyright and logo -->
+                              <tr>
+                                <th align="center" valign="top" width="320" height="30" style="padding:0;">
+                                  <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;">
+                                </th>
+                              </tr>
+                              <!-- end spacer between copyright and logo -->
+                              <!-- CR logo block-->
+                              <tr align="center">
+                                <th align="center" valign="top" width="550" height="70" style="text-align:center;">
+                                  <table align="center" border="0" cellpadding="0" cellspacing="0" height="71" valign="top" width="100%">
+                                    <tbody>
+                                      <tr>
+                                        <th align="center" width="100%" height="71" style="padding:0;" valign="top">
+                                          <!-- link -->
+                                          <a href="https://www.comicrelief.com/">
+                                            <!-- logo change src (source) and alt text-->
+                                            <img alt="Comic Relief logo" height="70" src="https://s3.amazonaws.com/email-assets.comicrelief.com/2017/Logos/CR18-logo-tilted.png" style="display: block; border-width: 0px; border-style: solid; margin: 0 auto;">
+                                          </a>
+                                        </th>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </th>
+                              </tr>
+                              <!-- end CR logo block-->
+                              <!-- spacer bottom -->
+                              <tr>
+                                <th align="center" class="emailwrapto100pc" valign="top" height="30" style="padding:0;">
+                                  <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;">
+                                </th>
+                              </tr>
+                              <!-- end spacer bottom -->
+                            </tbody>
+                          </table>
+                        </th>
+                        <!-- end inner container -->
+                        <th width="15" align="center" valign="top" class="mobpadding" style="padding:0;">
+                          <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="15">
+                        </th>
+                      </tr>
+                      <!-- end container -->
+                      <!-- spacer bottom -->
+                      <tr align="center" valign="top">
+                        <th height="70" align="center" valign="top" colspan="3" style="padding:0;">
+                          <img alt="" border="0" height="1" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/spacer.gif" style="display: block;" width="1">
+                        </th>
+                      </tr>
+                      <!-- end spacer bottom -->
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+              <!-- END OF FOOTER ROW-->
+              <!-- ROWS END HERE -->
+              </tbody>
+            </table>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
