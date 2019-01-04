@@ -100,6 +100,9 @@
         *[class=mobile-padding]{ padding-left: 14px !important; padding-right: 14px !important;}
         *[class=mobile-centred] { text-align: center !important;}
       }
+      @media screen and (min-width: 600px){
+        table[class=desktop-vertical-stack] { writing-mode: vertical-rl; -webkit-writing-mode: vertical-rl; -ms-writing-mode: vertical-rl;}
+      }
     </style>
   </head>
   <body style="padding:0; margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:100%; min-width:100%;">
@@ -598,7 +601,7 @@
                                         <!-- change image block's background colour 2x -->
                                         <th bgcolor="#2C0230" style="background-color:#2C0230;" width="286" class="subpodimage" align="center" valign="top">
                                         <!-- end image block background colour -->
-                                          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                          <table class="desktop-vertical-stack" width="100%" border="0" cellpadding="0" cellspacing="0">
                                             <tbody>
                                               <tr>
                                                 <th width="286" height="50%">
@@ -608,8 +611,6 @@
                                                     <img class="emailwrapto100pc" alt="Alt text here" border="0" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/square_245x245.jpg" style="display: block; width: 286px; height: 286px;">
                                                   </a>
                                                 </th>
-                                              </tr>
-                                              <tr>
                                                 <th width="286" height="50%">
                                                   <!-- image link --> 
                                                   <a href="http://www.comicrelief.com" target="_blank" style="padding:0;">
@@ -617,7 +618,7 @@
                                                     <img class="emailwrapto100pc" alt="Alt text here" border="0" src="http://email-assets.comicrelief.com.s3.amazonaws.com/2017/template/square_245x245_pink.jpg" style="display: block; width: 286px; height:286px;">
                                                   </a>
                                                 </th>
-                                              </tr>
+                                              </tr>                              
                                             </tbody>
                                           </table>
                                         </th>
